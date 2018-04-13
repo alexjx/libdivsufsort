@@ -3,6 +3,10 @@ cmake_minimum_required(VERSION 2.4.4)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
 include(AppendCompilerFlags)
 
+if (POLICY CMP0048)
+  cmake_policy(SET CMP0048 NEW)
+endif (POLICY CMP0048)
+
 ## Project information ##
 project(libdivsufsort C)
 set(PROJECT_VENDOR "Yuta Mori")
